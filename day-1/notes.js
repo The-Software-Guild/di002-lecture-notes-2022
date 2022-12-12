@@ -23,7 +23,7 @@
 // }
 
 // function nameOfFunction(parameter1, parameter2) {
-    
+
 // }
 
 //making some changes
@@ -46,7 +46,24 @@
 
 
 
+// git
+// local and remote
+// local binary === your computer
+// remote binary === the github website (cloud, serverless architecture)
+// clone (copy) down remote binary to local so you can work on things on your computer
 
+//step 1 to clone down code
+// git clone CONNECTION_STRING NAME_OF_DIRECTORY
+// step 2 will alwaysb be install dependecies
+// npm install
+
+// checkout -> 
+// pull -> really general update 
+
+// IDE === integrated development environment
+
+// java is strictly typed  all values must be declared with an assocaiting type 
+// JS is loosely typed (Typescipt is a superset of JS that is strictly typed) React Flow (RN)
 
 // react and js are declarative
 // declarative vs imperative
@@ -56,9 +73,27 @@
 // get off penn station exit NW corner
 // walk .6miles east to madison ave
 
+// standards talking about syntax
+// es6 is the current accepted standard of JS
+
 // ruby and rails 
 // imperative
 // You need to get on the a train to penn and wlak to the met its only like a half mile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // single line comments
 
@@ -68,7 +103,8 @@ mutiple
 line 
 comments .... get it? */
 
-// mostly everything named is CC
+// mostly everything named is camelCase
+// values, variables, expressions
 const someVariableExample = {};
 
 // two exceptions
@@ -86,10 +122,9 @@ const CLOUDFORGE_CONFIG_SOMETHING = 129837128937;
 // letMeTypeThisOut
 
 // readability, computationally its more effective to parse, no capitalization
+// mostyl all operating systems and websites/programs use different case sensitiviyty
+// this-word and This-word
 
-// interoperable
-
-// JS sntax is soley for humans ()
 
 // ASI
 // semi colons .... semi colons are "necessary" at the end of every grouping of logical thought or
@@ -97,53 +132,82 @@ const CLOUDFORGE_CONFIG_SOMETHING = 129837128937;
 
 // end end of every logical grouping expression
 
+// they should be done by yourself -> read trhough them right before a exercise
+// code alongs
+
+// quizes -> conceptual tests of knowledge
+// exercises -> practical tests of knowledge in groups 
+// assignments -> 2 part bankign interface project done in your 
+// groups representive of your "final" proejct -> will be due in github classroom
+
+/* 
+
+Next week is instructor led, those who are going to Centene will go learn GoLang 
+and the JPMC people are going to learn AWS. December 26th-placement day is 
+self paced.
+
+*/
+
 
 // value === data types
-// primitives
-// 12 + 1 //13
+// primitive values are imutable (cannot be changed)
 
 // BigInt
+// :symbol
 
-// 'I just said: "this is a string that needs doubles inside"'.toUpperCase // 
-// `in order to concatenate ${MY_SECRET} into sentances` //es6 featuire aka syntactical sugar aka new syntax for old concept
-// // if i console logged line 64 ==+ in order to concatenate fiji into sentances
+// old syntax no longer accepted, dont use ever
+// var example = new Number()
+// new Boolean()
+// // instead use literals!
+
+// 37 // this is a number litteral
+
+// console.log(37 + 3) // 40
+
+// 'single quote string  "use double quotes inside"'
+// "double quote string" + ' ' + 'single quote string'
+
+// // es6 strign interpolation
+// // new syntax for old functionality
+// // syntacitcal sugar
+// // `this is a string with ${someVariable}`
+
 // true & false
 
 // // there are two values that are used to describe missing data
 // undefined // refers to unintenionallty missing data
 // null // purposefully missing 
 
-// symbol
 
 // complexes
 // there is only a singular construct in JS and that is an object
+// JS uses the hash data  structure in its only construct — objects (one of the few complex value)
+
 // {} is used to describe a singular thing in more detail
 // var myExampleObj = {
-//      key:value,
+//      key: 'value'
 // }
 
 // var myDog = {
 //      name: 'fiji',
-//      age: 4
+//      age: 4,
+//      isGoodBoy: true
 // }
 
+// console.log(myDog)
+
+// old not really agreed upon syntax anymore or bad habbits from another language
+// console.log(myDog['age'])
+
 //object dot notation
-// objectReciever.propertyName
+// objectReciever.propertyName // will retrun (output) the value of the property
+
 // console.log(myDog.name) // fiji
 // console.log(myDog.age) // 4
-// // console.log(myDog['age'])
-// console.log(myDog) // JS passes its values by reference except for arrays which are pass by value
 
-// when declaring any value youi are only to declare it with literal syntax
-// 3
+// JS passes its values by reference except for arrays which are pass by value
+// console.log(myDog) // 
 
-// 8
-// 17
-// {}
-// true
-// undefined
-// null
-// 'string literal'
 
 
 // fx's in js should take in somethign and return or produce 
@@ -153,14 +217,93 @@ const CLOUDFORGE_CONFIG_SOMETHING = 129837128937;
 // then curly braces to start a block of scope
 // explicitly returned
 
-// a block of code is created within the curly braces of a functions closure
-// named function
-function nameOfFunction(parameter1, parameter2) {
-     //parameters are treated like local variables within the fx's block for scoping
-     let result = parameter1 + parameter2;
+// parameters and arguments
+// parameters are the names of the variables that are used in the function definition
+// arguments are the values that are passed into the function when it is called
 
-     return result;
+// part 1 declaring (defining) a function
+function sumValues(parameter1, parameter2) {
+     // block of scope
+     // paramters are treated like local variables inside of the fx block(scope)
+     // act like placeholders for arguments
+     console.log('hello world') // printed to console first
+
+     // return statements automatically end the execution of JS in that scope
+     return parameter1 + parameter2;
+
+     console.log('when will this print to the console') //
 };
+// part 2 calling a function (invocation)
+
+// 2. function style
+// fxName(argument1, argument2)
+// argument input location is important
+
+// var result = sumValues(1, 2);
+// var result2 = sumValues(4, 4); // 8
+// var result3 = sumValues(9, 3); // 12
+
+// console.log(result) // 3 // the logging of return balue fo the function
+
+
+
+
+
+
+
+
+
+
+// node showcases functions as [Function: nameOFThatFunction]
+// [Object: object] => serialize or deserialize
+// JSON.stringify()
+// JSON.parse()
+
+// 3 types of fx invoication
+// 1. method style
+// 2. function style
+// 3. constructor style
+
+// methods are functions that are properties of objects
+// when associating variables with objects or arrays it is covention
+// to declare those varaibales with the const keyword
+const myDog = {
+     name: 'fiji',
+     age: 4,
+     isGoodBoy: true,
+     favoriteOutfit: {
+          sweater: 'green',
+          designer: 'christina cowen',
+          personalEnjoyment: false
+     },
+     speak: () => {
+          console.log(`hi my name is ${this.name} and I am ${this.age} years old`)
+     }
+}
+
+console.log(myDog.speak()) // woof woof
+
+// our first example of an arrow function
+const exampleArrow = () => {
+
+} // there is no lexical binding of the "this" keyword
+
+// es6 version (syntacitxcal sugar) of a named function is a arrow function
+
+
+
+
+
+// myDog.name = 'fiji the dog'
+
+// // 1. method style
+// // objectReciever.methodName(argument1, argument2)
+// console.log(myDog.age) // 4
+
+// when passing the value or reference to afucntion around do NOT include parenthesis
+// when trying to use or invoke that function USE parenthesis
+
+
 
 // no other types
 // console.log(typeof []) // obj
@@ -169,16 +312,23 @@ function nameOfFunction(parameter1, parameter2) {
 // console.log(typeof /regex/) //  obj
 // console.log(typeof undefined) // undefined
 // console.log(typeof null) // obj
+// console.log(typeof '3') // string
+// console.log(typeof 3) // obj
 
 // annonymous fx
-// function (num1, num2) {
-     
+// (num1, num2) => {
+
 // }
 
 // // constructor function are how JS makes objects programatically
 // function ConstructorFunction() {
 
-// }
+// } // programatically create dynamic objects using protoypes
+
+// the new es6 syntax are classes
+
+// new Date() // global object date constructor
+// new Array() // global object array constructor
 
 // methods are functions that enact themselves on objects
 
@@ -188,9 +338,6 @@ function nameOfFunction(parameter1, parameter2) {
 // };
 
 // myDog.age = 5;
-
-// variables point to values not nevessarily store them 
-// variables are declared and they are assigned
 
 // decleration
 // keyword nameOfVariable
@@ -203,70 +350,58 @@ function nameOfFunction(parameter1, parameter2) {
 
 // reassignment
 
+// var myDog = {
+//      name: 'fiji',
+//      age: 4,
+// };
+
+// a statement
+// myDog = true;
+
+// a expressions
+// console.log(myDog) // true
+// console.log(2 + 2) // 4
+
+
+// variables point to values not nevessarily store them 
+// variables are declared and they are assigned
+
 // var is global scoped and let/const are function(block) scoped
-
-let weather = 'good'
-weather = 'bad, it is stormin now'
-
-// console.log(weather) //
-// console.log(myDog) //
-
 // it is accepted convention to use const when declaring objects and arrays
 
-// <--------------------------- issue number and date ------------------------------------->
-// pseudocode
-// tryingt o add new private method that interacts with class A from ___________ and then does whatever with controlelr B from hehejekhjkehn alksdnmlaskas
 
-// breadcrumb
-// returns me x was expecting y
-// function nameOfFunction(parameter1, parameter2) {
-//      //parameters are treated like local variables within the fx's block for scoping
-//      let result = parameter1 + parameter2;
 
-//      return result;
-// };
+// variables are declared using the var or let/const keywords
+// const cherry = 'red';
 
-// didnt work got blank from thisStackOF.com
-// function nameOfFunction(parameter1, parameter2) {
-//      //parameters are treated like local variables within the fx's block for scoping
-// // diff stuiff
+// cherry = 5;
 
-//      return result;
-// };
+// var banana = cherry;
 
-// function nameOfFunction(parameter1, parameter2) {
-//      //parameters are treated like local variables within the fx's block for scoping
-//      let result = parameter1 + parameter2;
+// console.log(banana) // 5
 
-//      return result;
-// };
+// var is old syntax and refers to a global scope
 
-// console.log(nameOfFunction())
-// gogole somethign
-// documentation (issues) => recent blog posts or tutorials -> SO
+// let and const are new es6 syntax
+// let and const are syntactical sugar over var keywords variable declerations
+// let/const are block scoped
 
-// comments should be inline documentation
-// """this is docstring"""
+// first always declare with let and then if you think you need to restrict the usage of that variable 
+// you can refactor it to the const keyword
 
-// if the expression in the parenthesis evaluates to true then execute the block of code
-if (true) {
-     //do this stuff
-}
 
-function testTrue (param1) {
-     this
-     if (param1 || param2) {
-          return 'your input evaluates to true'
-     } else {
-          return 'your input was false'
-     }
-}
 
-// const result = testTrue({}, '') 
-// console.log(result) // your input evaluates to true
-// object.is(a, b) is ane xpression that eveal;uates to true if a and b are the same value adn false if theya re not
 
-// console.log(Object.is(2, 2)) // true
+
+
+
+
+
+// Object.is(a, b) is ane xpression that evealuates to 
+// true if a and b are the same value adn false if theya re not
+
+
+// console.log(Object.is(2, 3)) // false
 // console.log(Object.is(2, '2')) // false
 // console.log(Object.is({}, {})) // false 
 
@@ -275,8 +410,7 @@ let dwarves = 7;
 let continents = '7';
 let worldWonders = 3 + 4;
 
-
-// console.log(Object.is(dwarves, continents)); // false
+// console.log(Object.is(dwarves, continents)); // false 
 // console.log(Object.is(continents, worldWonders)); // false
 // console.log(Object.is(worldWonders, dwarves)); // true
 
@@ -292,9 +426,9 @@ let worldWonders = 3 + 4;
 // console.log(-0 === 0)  // true
 // console.log(0 === -0)  // true
 
-// console.log(4 == '4')
+// console.log(4 == '4') // true
 
-// console.log(5 == {})
+// console.log(5 == {}) // false
 
 // DRY [dont repeat yourself]
 
@@ -307,10 +441,25 @@ let worldWonders = 3 + 4;
 // var -> let and const 
 
 
+// // if the expression in the parenthesis evaluates to true then execute the block of code
+// if (true) {
+//      //do this stuff
+// }
+
+// function testTrue(param1) {
+//      this
+//      if (param1 || param2) {
+//           return 'your input evaluates to true'
+//      } else {
+//           return 'your input was false'
+//      }
+// }
+
+
 // arrow fx's have no lexical binding of the this keyword
 const exampleArrowFx = (param1, param2) => {
      //inside a "normal" fx we are used to 
-     return function examplereturn() {}
+     return function examplereturn() { }
 }
 
 // explicity returned
@@ -325,13 +474,13 @@ const exampleArrowFx = (param1, param2) => {
 // 2. method style
 // methods are functions that enact themselves on objects 
 
-const myDog = {
-     name: 'fiji',
-     age: 4,
-     speak: function () {
-          console.log(`bork bork my name is ${this.name}`)
-     }
-};
+// const myDog = {
+//      name: 'fiji',
+//      age: 4,
+//      speak: function () {
+//           console.log(`bork bork my name is ${this.name}`)
+//      }
+// };
 
 // objectReciever.propertyName()
 // console.log(myDog.speak) // [Function: speak]
@@ -364,7 +513,7 @@ const myDog = {
 // lists, ques, stacks, thread
 // zero indexed
 //                    0    1     2     3     4
-const exampleArray = [1, true, myDog, {}, 'banana']
+// const exampleArray = [1, true, myDog, {}, 'banana']
 
-console.log(exampleArray[0]) // 1
-console.log(exampleArray[4]) // 
+// console.log(exampleArray[0]) // 1
+// console.log(exampleArray[4]) // 
