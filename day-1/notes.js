@@ -8,33 +8,6 @@
 
 // prototypes in JS are how we handle inheritence
 
-// functional programming
-// everythign is a function
-// thread of execution (the ability to run code) synchronous (async)
-
-// ruby === convention over configuration
-// dynamic & deterministic (imperitive)
-
-// single line comments
-
-/* these are used
-for 
-mutiple 
-line 
-comments .... get it? */
-
-// react and js are declarative
-// declarative vs imperative
-// declarative 
-// walk out my apartment head north to atlantic ave A train
-// ride A train manahttan side until penn station
-// get off penn station exit NW corner
-// walk .6miles east to madison ave
-
-// ruby and rails 
-// imperative
-// You need to get on the a train to penn and wlak to the met its only like a half mile
-
 // i need a fx that takes in A and B and returns me X
 
 // returned me the inverse of my expected output
@@ -53,13 +26,20 @@ comments .... get it? */
     
 // }
 
+//making some changes
 
 // this helper fx from utils/whatever.js job is to hanlde modal closure found in whereve
-nameOfFunction(3, 5) // 8 => -11
+// nameOfFunction(3, 5) // 8 => -11
 
 // documention, blog posts that are recent, stack overflow
 
 
+// functional programming
+// everythign is a function
+// thread of execution (the ability to run code) synchronous (async)
+
+// ruby === convention over configuration
+// dynamic & deterministic (imperitive)
 
 
 
@@ -68,6 +48,25 @@ nameOfFunction(3, 5) // 8 => -11
 
 
 
+// react and js are declarative
+// declarative vs imperative
+// declarative 
+// walk out my apartment head north to atlantic ave A train
+// ride A train manahttan side until penn station
+// get off penn station exit NW corner
+// walk .6miles east to madison ave
+
+// ruby and rails 
+// imperative
+// You need to get on the a train to penn and wlak to the met its only like a half mile
+
+// single line comments
+
+/* these are used
+for 
+mutiple 
+line 
+comments .... get it? */
 
 // mostly everything named is CC
 const someVariableExample = {};
