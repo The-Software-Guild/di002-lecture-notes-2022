@@ -1,5 +1,49 @@
 // notes.js
 
+function printTruthValue(parameter) {
+     if (parameter) {
+          // run this block of code
+          console.log('this value is truthy')
+     } else {
+          console.log('falsy')
+     }
+}
+
+// printTruthValue(0) 
+// printTruthValue(NaN) // 
+// printTruthValue('') 
+// printTruthValue({}) 
+// printTruthValue([])
+
+
+// JS -> single threaded synchnrounous 
+// Js execution context -> lexical scoping, call-stack
+// threads are really just stack DS , array LIFO (last in first out)
+
+
+// Node.js -> async non-blocking I/O
+// node event loop 6 different phases (only 3 are commonly interacted 
+// with and important === timer, poll, check)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // arrays in JS behave the exact same as they do in all other laguage
 // if objects describe us a singular thing in more detail {}
@@ -14,14 +58,6 @@
 // console.log(exampleArray[0]) // 1
 // console.log(exampleArray[4]) // 
 
-// JS -> single threaded synchnrounous 
-// Js execution context -> lexical scoping, call-stack
-// threads are really just stack DS , array LIFO (last in first out)
-
-
-
-// Node.js -> async non-blocking I/O
-// node event loop 6 different phases (only 3 are commonly interacted with and important === timer, poll, check)
 
 // maps
 // lower time complexity relationship
@@ -63,7 +99,7 @@ itterateArrayEx.unshift('add to beginning')
 const sliceResult = itterateArrayEx.slice(0, 3); // non incluysive
 // const spliceResult = itterateArrayEx.splice();
 
-console.log(sliceResult)
+// console.log(sliceResult)
 // console.log(spliceResult)
 
 
