@@ -2,299 +2,116 @@
 
 ## Agenda
 
-1. Introductions
-2. Expectations
-3. Problem Solving Process
-4. How to Ask a Good Question
-5. JavaScript Basics
-6. Node
-7. Exercise: JavaScript Variables
-8. Equivalence
-9. Control Flow & Conditionals
-10. Test Yourself
-11. Functions
-12. Exercise: Defining Functions
-13. Arrays
-14. Exercise: Working with JavaScript Arrays
-15. JS & the browser
-16. Events
-17. Exercise: Lucky Sevens
+1. Day 1 Recap
+2. Node
+3. Control Flow & Conditionals
+4. Test Yourself
+5. Exercise: Defining Functions
+6. Arrays
+7. Exercise: Working with JavaScript Arrays
+8. JS & the browser
+9. Events
+10. Exercise: Lucky Sevens
 
 ## Overview
 
-JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Today we will be exploring it's basic syntax and conventions eventually making way for [React.js](https://reactjs.org/) tomorrow, one of the most powerfull, in demand, and popular frameworks in the world.
+The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page. Today we explore two implementations of it, in the browser and somethign more modern via React.js.
 
 ### Learning Goals
 
 In this lesson we:
 
-- Introduce JavaScript syntax and conventions
+- Continue exploring JavaScript syntax and conventions
 
 - Briefly cover Node.js
 
-- Learn how to have an efective problem solving process & ask good questions
+- practice control flow
 
-- Explore equivalence within JS
+- Explore arrays, the DOM, and events before covering them in more detail tomorrow, as we transion to [React.js](https://reactjs.org/)
 
-- Define control flow examples
+### HTML Refresh
 
-- Explore arrays, functions, the DOM, and events before covering them in more details tomorrow morning.
+**HTML** describes the structure of a Web page and consists of a series of elements. Elements tell the browser how to display the content.
 
-## Expectations
+#### **Page Structure**
 
-### Zoom
+![page structure](./assets/images/html-page-structure.png)
 
-10:00am - 5:00pm EST @ [Meeting Link](https://thesoftwareguild.zoom.us/j/93078805703?pwd=TVpXOEVKTllWRXV6QmYvNnpjRDEwQT09)
+#### **Elements**
 
-- You are required to be in the meeting at all times except for breaks, lunch, and if you need step away.
+An HTML **element** is defined by a start tag, some content, and an end tag.
 
-- **Display name syntax** === FIRST_NAME LAST_NAME (PREFERRED_FIRST)-TEAMASSIGNMENTNUMBER
+```html
+<tagname>Content goes here...</tagname>
 
->example: Patrick Morgan (James) - Team #6
+<!-- I am comment -->
 
-- Cameras should always be on while in the main room. If you are in any other room, study session, group project, break, lunch, before or after class feel free to have your camera off.
-
-- All meetings are recorded and posted in [Engage](https://academy.engagelms.com/login/index.php) (LMS) daily under the "Zoom Recordings" heading.
-
-- **Breakout rooms** (27 of you = 6 teams of 4-6 students each) main room, instructor office, a room for each team named after that team, 6 or more other rooms =  quiet rooms.
-
-- **Communication** -> zoom chat & reactions (slow down, speed up, raise hand, away).
-
->All other comunications will be done through Engage's announcements forum or via Slack's di002_oct2022 channel.
-
-### Groups (Teams)
-
-1. Group #1 : Courtney, Andrea, Sarah, and Yaren
-2. Group #2: Ekaterina, Emma, Tania, and Elizabeth
-3. Group #3: Nyssa, Everlyn, Mariya, and Claude
-4. Group #5: Ciru, Christina, Arah, Dianhandra, Thu, Rachel
-5. Group #4, Ashley, Kathy, Ysabel, and Jenna
-6. Group #6: Alena, Diana, Angela, Victoria, Abigail
-
-## 3. Problem Solving Process
-
-Starting and maintaining a good problem solving process is a **vital** skill as a programmer. This is especially important for students and soon to be junior level devs.
-
-The key here is to find something that works for you and stick to it no matter what. As the idium goes, "3 hours of planning can save you 3 days of headaches."
-
-### Ex: The 20 min rule
-
-Conceptually, we never want to be stuck on a given problem for more than 20 minutes. Let's take a look at that practically.
-
-1) Given any problem or task the first step will always be to map out your direction, idea, data strucure & flow, components, local & global state, folder structure, required modules, ...etc. This can be quick but is vital to our process. Should be done with psedo code and some form or drawings or wireframing.
-
-2) Code out the scaffold of your project and start working on your tasks, constantly testing or reffering to the unit tests provided to you. Important to do this as you develop (Test Driven Development) not once you complete hours of coding.
-
-3) When stuck try different solutions for no more than 20 mins in your IDE. DO NOT use destructive code — meaning comment out old code not deleting it in lie of copy pasting new code from the internet. Creating this breadcrumb of ideas 99% of the time will lead you to your answer before moving forward.
-
-4) Take a break! This can mean any number of things I usually suggest to go work on other code. Something that is "easy" or "easily" completed in your project. Often times writing sucessfull code can get your brain flowing again. Or go for a walk, do some pushups, find your peace, take the dog out — whatever works for you.
-
-5) Try again for 20 minutes. You should not have went through stack overflow or anythign yet if you are goign to use outside materials it should be from your notes or the **documentation** for whatever you are using. I know often your answer can be found easily on SO but at your level I think it will help you immensely to try and figure it out without that help. Leading to a stronger knwledge base will make your interview process easier and ultimately add more value to the first company you go to work for.
-
-6) Leave comments **everywhere**. If you are not, start immediately and do not stop. This is important for your own sanity but also good practice for when you join a team. Think of facebooks codebase and 100,000 some developers globally. Imagine looking at some code and trying to figure out a bug or what the problem is with no test files or comments. Write comments everywere. Full stop. This will also differenite your code from other juniors as you move into the interview process.
-
-7) If you can not figure it out yet now head online in this order — documentation, blogs/vids/articles, stack overflow. When using google for these look for **recent** posts.
-
-8) If you are still stuck you need to ask somebody for help. Utilize your networks. Start thinking about the fact you will not have this BU network soon and begin thinking about how to create your own moving forward. Twitter, dischords, slack channels, meetups.
-
-## 4. How To Ask a "Good" Question
-
-Asking a good question is not only for yourself but helps the person helping you quickly and efficently figure out what in the hell is going on in your jumbled mess of a project and how to help you through it. At first this will be your support system at BU, next most likely stack overflow, and lastly your mentor or senior level devs. The very first thing your senior dev will ask you will be did you google it.
-
-### Contents of a "good" question
-
-1) Code snippets of every file involved. If full stack MERN this could be 5-10 ... all labeled on the top with a comment of the name of the file. Including the commented out code of your "tries."
-
-2) A description of the problem you are trying to solve, or what you are tryign to accomplish. Think — how do I do x ..... tell us what x is.
-
-3) What you specifically have done to try and solve this problem.
-
-4) What error you are getting and any associated screenshot of that error.
-
-## 5. Vanilla JavaScript Overview
-
-JS is a lousely typed dynamic scripting language with first-class functions.
-
-The standards for JavaScript are the ECMAScript Language Specification (ECMA-262) and the ECMAScript Internationalization API specification (ECMA-402). As soon as one browser implements a feature, we try to document it. This means that cases where some proposals for new ECMAScript features have already been implemented in browsers, documentation and examples in MDN articles may use some of those new features. Most of the time, this happens between the stages 3 and 4, and is usually before the spec is officially published.
-
-Do not confuse JavaScript with the Java programming language. Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two programming languages have very different syntax, semantics, and use.
-
-> [VS Code Mac OS keyboard shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
-
-### Syntax
-
-Values, variables, and expressions are camelCased while constants and enviromental variables (ENV) are SCREAMING_SNAKE_CASE
-
-> [Air BnB Style Guide](https://github.com/airbnb/javascript)
-
-Directories, assets, repositores, basically everything else should be kebab-case. Do you know why?
-
-### Values
-
-#### _Primitive_
-
-- Numbers
-- Strings
-- Booleans, used for logical operations.
-
-- Undefined, used for unintentionally missing values.
-- Null, used for intentionally missing values.
-
-- BigInt
-- Symbolk, used to hide implementation details.
-
->**Primitive values are immutable (unchangeable/read only)!**
-
-#### _Complex_
-
-- **Objects** are denoted with curly braces, `{}`, and are used to group related data and code.
-
-- **Functions** are similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.
-
-#### **No Other Types**
-
-```javascript
-console.log(typeof []) // expected output ?
-
-console.log(typeof new Date) // 
-
-console.log(typeof function myFx(){}) // 
-
-console.log(typeof /regex/) // 
-
-console.log(typeof null) //
+<!-- example elements: -->
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
 ```
 
-### **Expressions**
+#### **Attributes**
 
-Expressions are questions that JavaScript can answer. JavaScript answers expressions in the only way it knows how — with values.
+HTML **attributes** provide additional information about HTML elements. Attributes are always specified in the start tag. Attributes usually come in name/value pairs like: `name="value"`.
 
-If we “ask” the expression 2 + 2, JavaScript will “answer” with the value 4.
+##### **href**
 
-```Javascript
-console.log(2 + 2); // 4
+The `<a>` tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:
+
+```html
+<a href="https://www.w3schools.com">Visit W3Schools</a>
 ```
 
-If the word “expression” confuses you, think of it as a piece of code that expresses a value. You might hear people say that 2 + 2 “results in” or “evaluates to” 4. These are all different ways to say the same thing.
+##### **src**
 
-We ask JavaScript 2 + 2, and it answers with 4.
+The `<img>` tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:
 
-> **Expressions always result in a single value**.
+```html
+<img src="img_girl.jpg">
+```
 
-### Operators
+##### **style**
 
-_Read:_ [📕 JavaScript: Value Types and Operators](https://academy.engagelms.com/mod/book/view.php?id=135569)
+The HTML `style` attribute is used to add styles to an element, such as color, font, size, and more.
 
-_Read:_ [📕 JavaScript: Expressions, Statements, and Variables](https://academy.engagelms.com/mod/book/view.php?id=135570)
+```html
+<tagname style="property:value;">
+```
 
-### **Variables**
+The _property_ is a CSS property. The _value_ is a CSS value.
 
-Variables are not values. Variables point to values.
+##### **id**
 
-[Difference between var, let, and const decleration keywords](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
+The `id` attribute specifies a unique id for an HTML element. The value of the `id` attribute must be unique within the HTML document.
 
-## 6. Node.js
+**The `id` attribute is used by JavaScript to access and manipulate the element with the specific id.**
+
+The syntax for id is: write a hash character `#`, followed by an id name. Then, define the CSS properties within curly braces `{}`.
+
+```html
+<h1 id="myHeader">My Header</h1>
+```
+
+## 1. Day 1 Recap
+
+- Expectations
+
+- Problem Solving Process
+
+- How to Ask a Good Question
+
+- JavaScript Basics
+
+- Equivalence
+
+- Functions
+
+## 2. Node.js
 
 [Node.js](https://nodejs.org/en/) is a JS runtime enviroment built on [Chrome's V8 JS engine](https://v8.dev/).
 
-## 7. Exercise: JavaScript Variables
-
-_Test Yourself:_ [🧪 Exercise: JavaScript Variables](https://academy.engagelms.com/mod/page/view.php?id=135571)
-
-## 8. Equality of Values
-
-In JavaScript, there are several kinds of equality.
-
-- Strict Equality: `a === b` (triple equals).
-
-- Loose Equality: `a == b` (double equals).
-
-- Same Value Equality: `Object.is(a, b)`.
-
-### **Same Value Equality: `Object.is(a, b)`**
-
-In JavaScript, `Object.is(a, b)` tells us if a and b are the same value:
-
-```javascript
-console.log(Object.is(2, 2)); // 
-
-console.log(Object.is({}, {})); // 
-```
-
-This is called **Same Value Equality**.
-What does “same value” mean, exactly. You might already know this intuitively, but let’s verify your understanding.
-
-```javascript
-let dwarves = 7;
-let continents = '7';
-let worldWonders = 3 + 4;
-```
-
-Now try to answer these questions using the code above:
-
-```javascript
-console.log(Object.is(dwarves, continents)); // ?
-console.log(Object.is(continents, worldWonders)); // ?
-console.log(Object.is(worldWonders, dwarves)); // ?
-```
-
-- `Object.is(dwarves, continents)` is false because dwarves and continents point at different values.
-
-- `Object.is(continents, worldWonders)` is false because continents and worldWonders point at different values.
-
-- `Object.is(worldWonders, dwarves)` is true because worldWonders and dwarves point at the same value.
-
-#### **Strict Equality: a === b**
-
-So what’s the difference between `Object.is` and `===`?
-
-In almost all cases, the same intuition works for **Strict Value Equaliy** too. For example, `2 === 2` is **true** because 2 always “summons” the same value.
-
-Conversely, `{} === {}` is **false** because each `{}` creates a different value.
-
-However, there are two rare cases where the behavior of `===` is different.
-
-Consider the cases below as exceptions to the rule — just like you had to memorize the irregular verbs when you were learning English. Both of these unusual cases involve “special numbers” that we discussed in the past:
-
-1. `NaN === NaN` is **false**, although they are the same value.
-
-2. `-0 === 0` and `0 === -0` are **true**, although they are different values.
-
-### First SPecial Case: `NaN`
-
-`NaN` is a special number that shows up when we do invalid math like `0 / 0`.
-
-You probably won’t do this intentionally, but it can happen when you work with incorrect data in the first place, or if your calculation contains a mistake.
-
-```javascript
-console.log(NaN === NaN) // false
-console.log(Object.is(NaN, NaN)) // true
-```
-
-`NaN === NaN` is always false, but `NaN` is the same value as `NaN`.
-
-### Second Special Case: `-0`
-
-In regular math, there is no such concept as “minus zero”, but it exists in floating point math for practical reasons. Here’s an interesting fact about it.
-
-Both `0 === -0` and `-0 === 0` are always true.
-
-In practice, I haven’t run into a case where this matters in my entire career.
-
-> Imagine negotiating business deals at a masked carnival. You might talk to two people, and not realize that you really talked to the same person twice. Or you might think you talked to one person but those were two different people!
->
-> If you don’t have a clear mental model of equality in JavaScript, every day is like a carnival – and not in a good way. You’re never quite sure if you’re dealing with the same value, or with two different values. As a result, you’ll often make mistakes — like changing a value you didn’t intend to change.
-> -Dan Abramov
-
-#### **Loose Equality**
-
-The rules of Loose Equality (also called “abstract equality”) are arcane and confusing. They are widely acknowledged as an early bad design decision. Many coding standards prohibit the use of == and != in code altogether.
-
-Although I don't take strong opinions on what features you should or shouldn’t use, we’re not going to cover Loose Equality for now. It’s uncommon in modern codebases, and its rules don’t play a larger role in the language — or in our mental model. If you are curious, check out how it works, but don’t feel pressured to memorize it.
-
->"**_Loose Equality (double equals) is the bogeyman of JavaScript._**" - Dan Abramov
-
-## 9. Control Flow & Conditionals
+## 3. Control Flow & Conditionals
 
 Control flow is the order in which a program's lines of code are executed. Generally, a computer will execute JavaScript code one line at a time, from top to bottom. But there are certain control flow mechanisms we can use to interrupt this flow.
 
@@ -302,13 +119,13 @@ _Read:_ [📕 JavaScript: Control Flow](https://academy.engagelms.com/mod/page/v
 
 _Practice:_ [🛠 Code-Along: Logging Letters](https://academy.engagelms.com/mod/page/view.php?id=135573)
 
-## 10. _Test Yourself_
+## 4. _Test Yourself_
 
 1. [🧪 Exercise: If Statements](https://academy.engagelms.com/mod/page/view.php?id=135574)
 
 2. [🧪 Exercise: for loops](https://academy.engagelms.com/mod/page/view.php?id=135575)
 
-## 11. Functions
+## 5. Exercise: Defining Functions
 
 JS has **first class functions**:
 
@@ -326,33 +143,31 @@ _Read:_ [📕 JavaScript Functions](https://academy.engagelms.com/mod/page/view.
 
 _Practice:_ [🛠 Code-Along: Counting Characters](https://academy.engagelms.com/mod/book/view.php?id=135577)
 
-## 12. Exercise: Defining Functions
-
 _Test yourself:_ [🧪 Exercise: Defining Functions](https://academy.engagelms.com/mod/page/view.php?id=135579)
 
-## 13. Arrays
+## 6. Arrays
 
 _Read:_ [📕 JavaScript Arrays](https://academy.engagelms.com/mod/book/view.php?id=135580)
 
 _Practice:_ [🛠 Code-Along: JavaScript Array Methods](https://academy.engagelms.com/mod/book/view.php?id=135581)
 
-## 14. Exercise: Working with JavaScript Arrays
+## 7. Exercise: Working with JavaScript Arrays
 
 _Test yourself:_ [🧪 Exercise: Working with JavaScript Arrays](https://academy.engagelms.com/mod/page/view.php?id=135582)
 
-## 15. JS & the browser
+## 8. JS & the browser
 
 _Read:_ [📕 JavaScript and the Browser](https://academy.engagelms.com/mod/page/view.php?id=135583)
 
 _Practice:_ [🛠 Code-Along: JavaScript and the Browser](https://academy.engagelms.com/mod/book/view.php?id=135584)
 
-## 16. Events
+## 9. Events
 
 _Read:_ [📕 JavaScript and the DOM](https://academy.engagelms.com/mod/page/view.php?id=135585)
 
 _Practice:_ [🛠 Code-Along: JavaScript Form Validation and Content Control](https://academy.engagelms.com/mod/book/view.php?id=135586)
 
-## 17. Exercise: Lucky Sevens
+## 10. Exercise: Lucky Sevens
 
 _Test yourself:_ [🧪 Exercise: Lucky Sevens](https://academy.engagelms.com/mod/page/view.php?id=135587)
 
@@ -367,3 +182,4 @@ CSS is a tool to add style and depth to web pages.
 ### References
 
 - [MDN Web Docs > Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [W3 Schools > JavaScript Events](https://www.w3schools.com/js/js_events.asp)
