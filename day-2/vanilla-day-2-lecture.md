@@ -107,6 +107,8 @@ The syntax for id is: write a hash character `#`, followed by an id name. Then, 
 
 - Functions
 
+- Git
+
 ## 2. Node.js
 
 [Node.js](https://nodejs.org/en/) is a JS runtime enviroment built on [Chrome's V8 JS engine](https://v8.dev/).
