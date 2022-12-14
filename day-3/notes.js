@@ -114,7 +114,7 @@
 
 // memoization (caching) => a technique used to speed up programs by storing the 
 //results of expensive function calls and returning the cached result when the same inputs occur again
-// restrict its ability to re-render because even though it's parent information is changing its information does not need to change
+// restrict its ability to re-render because even though it's parent information is changing its information does not need to
 
 
 // state of the union (currentness of our country)
@@ -126,6 +126,21 @@
 // without adding unecessary dom node
 // ghost tags are a shorthand syntax for React.Fragment
 
+// GET, POST, PUT, DELETE, GET ONE (paramterized)
+// display all the data GET (learn how to parse json)
+JSON.parse()
+// displaya  singular thing witha  GET ONE
+// add new things with POST
+// update things with DELETE
+
+// evenets in react adn even handlers
+
+// Axios (promise based http client) npmjs.com/package/axios
+// what part of react allows me to fetch data from an api and display ior render thata data
+// use state and effect hooks to store changes and perform sideffects
+// how to bundle formdata into a json object for POST & PUT
+// error handling for both requests and for forms
+JSON.stringify()
 
 // OOP is a design paradiagm
 // inheritence // protoype (prototypal inheritence)
