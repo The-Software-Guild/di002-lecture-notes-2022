@@ -1,15 +1,33 @@
 // notes.js
 
-// think what the output of the following will be in the terminal console
+// think what the output of the following will be in the 
+// terminal console
 console.log(document)
 
 
 
 
+// this // global scope
 
+// {
+//      this // local scope (the object itself)
+// }
 
+// function nameOfFx() {
+//      this // global scope
 
+//      const someArrowFx = () => {
+//           this // nameOfFX
+//      }  
+// }
 
+// privatize methods and prpertioes with the keyword static
+// not passed through inheritence chain
+
+// 3 main fucntional design pattersn in JS
+// understanding this
+// understanding scope
+// .call(someOtherObj, this), .apply(), .bind() // function invocation scope and the scoping of the this keyword
 
 // API
 // REST
@@ -102,7 +120,7 @@ class ClassPerson {
 }
 
 const teacherClassEx = new ClassPerson('patrick', true); // 3rd type of function invocation
-teacherClassEx.speak()
+// teacherClassEx.speak()
 
 // // derived class
 // // derived class is used to create a new class with some shared attributes to a parent 
@@ -117,7 +135,7 @@ class Students extends ClassPerson {
 }
 
 const student1 = new Students('tony', false);
-student1.speak()
+// student1.speak()
 
 // OOP is a design paradiagm
 // inheritence // protoype (prototypal inheritence)
@@ -167,7 +185,7 @@ student1.speak()
 // it declares us a "state variable" -> preserve values between function calls (initializes state) this.state (class)
 
 // array destrucring syntax (es6)
-const [count, setCount] = useState(0)
+// const [count, setCount] = useState(0)
 
 // what do we pass to useState as ana rgument 
 // initial state value
@@ -188,9 +206,9 @@ const [count, setCount] = useState(0)
 
 
 // Does useEffect run after every render?
-useEffect(() => {
-     document.title = `You clicked ${count} times`;
-});
+// useEffect(() => {
+//      document.title = `You clicked ${count} times`;
+// });
 
 
 
