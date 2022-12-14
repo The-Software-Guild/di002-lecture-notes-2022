@@ -2,9 +2,7 @@
 
 // think what the output of the following will be in the 
 // terminal console
-console.log(document)
-
-
+// console.log(window.document.body)
 
 
 // this // global scope
@@ -29,6 +27,158 @@ console.log(document)
 // understanding scope
 // .call(someOtherObj, this), .apply(), .bind() // function invocation scope and the scoping of the this keyword
 
+
+
+// node modules are just resuable abstracted and fully encapsulated code that people
+// made to be used by the community
+// 3 different types
+// internal node modules (utils) 
+// external node modules (npm)
+
+
+
+// JS Object Notation
+
+
+// How is react reacting so quickly (VDOM)
+// what is a JS framework and what does that mean for us using one
+
+// component
+// element => jsx
+// props
+// state
+
+// props are the ONLY way to pass data from parent to child
+
+// SPA (single page application)'s what theya re why react is one why they are so popular
+
+
+
+// react specific syntax
+// component files
+// if a file composes a component it should only export a singular component
+// any file who exports a component should be named with a capital letter (PascalCase)
+
+// files who use jsx syntax or export components should reoslve in the .jsx file extension
+
+
+// import/export statement (es6 syntax) => syntacitcal sugar for require/module.exports
+// two different design paradiagms for exporting "things"
+// default export which uses the defaulty keyword
+// named export which uses the export keyword
+
+
+// components lifecycle
+// doesnt exists (not shown to the user or not painted to the dom)
+// is requested to be shown to the user (painting to the dom) -> this first render is called Mounting
+// then it exists and is shown to the user (re-rendering)
+// its time here has passed time to retire it back to not existsing and remove it from the DOM
+
+
+// D.R.Y. (dont repeat yourself)
+// Single Source of Truth (SSOT) -> one source of truth for all data
+
+
+// App.jsx
+// This is the entry point of the React app
+// It is the first file to be executed
+// resrved for routing 
+
+// jsx syntax is used to describe what the UI should like
+
+// JSX produces React “elements”
+// Elements are the smallest building blocks of React apps.
+// An element describes what you want to see on the screen:
+
+// treateing all coimponents as pure functions (they do NOT modify or attempt to modify their inputs)
+// props === jsut an object representing data besing passed from parent to child  
+
+// components are resuable functions comprised of elements
+// the name of component is PascalCase (actually constructor functions => class (js es6 classes))
+
+
+
+// pure functions
+// 1. do not change or augment their inputs (props {})
+// 2. reproducible/predictable output === given the same input it should output the same thing
+
+
+// reconcilliation => hollistic diffing algorithm that makes use of 3 assumptions
+// to kjeep track of changes and only update what is necessary
+
+// 3 things that make components re-render
+// state changes update that specific component
+// the props ebing passed to a component changes will cre-render that component
+// if any parent component up the anscetrial chain 
+// re-renders it will cause all of its children to re-render
+
+// memoization (caching) => a technique used to speed up programs by storing the 
+//results of expensive function calls and returning the cached result when the same inputs occur again
+// restrict its ability to re-render because even though it's parent information is changing its information does not need to change
+
+
+// state of the union (currentness of our country)
+// state of a molecule (water frozen, gas, liquid)
+// state === current snapshot of changes often used to track 
+
+// in any given component there must be only a singular parent node returned
+// reatc frgaments allow you to proerly group your elements when composing componetsn 
+// without adding unecessary dom node
+// ghost tags are a shorthand syntax for React.Fragment
+
+
+// OOP is a design paradiagm
+// inheritence // protoype (prototypal inheritence)
+// encapsulation //
+// abstraction // modularization pattern [react -. singular component should belong to a singular file] import and exporting(es6 version of require module.exports)
+// polymorphism // in JS to exhibit PM you must give up encapsulation 
+
+
+// the state hook
+
+// what does calling useState do?
+// returns a pair (create starte  item and function)
+// initializes state?
+// gets the current state of something
+//
+
+// it declares us a "state variable" -> preserve values between function calls (initializes state) this.state (class)
+
+// array destrucring syntax (es6)
+// const [count, setCount] = useState(0)
+
+// what do we pass to useState as ana rgument 
+// initial state value
+
+// what does useState return
+
+// effect hook
+
+
+// What does useEffect do?
+// tells react that ur component needs to do something after render 
+
+
+// Why is useEffect called inside a component? 
+// react to changes in state access to variable
+
+// certain scoped things (this, props, state )
+
+
+// Does useEffect run after every render?
+// useEffect(() => {
+//      document.title = `You clicked ${count} times`;
+// });
+
+
+
+// 3 reasons a component re-renders (updating)
+// props change
+// state change
+// a parent or ANY parent in the component tree hierarchy also rerenders for any reason
+
+
+
 // API
 // REST
 
@@ -43,11 +193,6 @@ console.log(document)
 
 // RESTful 
 
-// state of the union (currentness of our country)
-// state of a molecule (water frozen, gas, liquid)
-// state === current snapshot of changes often used to track 
-
-// state 
 
 // stateless
 // servers are considered stateless meaning they do not keep or store
@@ -77,9 +222,6 @@ console.log(document)
 //           this
 //      }
 // }
-
-
-
 
 
 // constructor functions 
@@ -150,72 +292,5 @@ const student1 = new Students('tony', false);
 // REST design paradaim
 // N + 1
 // Facebook create GraphQL -> federated ata layer implementation
-
-
-
-
-
-// pure functions
-// 1. do not change or augment their inputs (props {})
-// 2. reproducible/predictable output === given the same input it should output the same thing
-
-
-// reconcilliation => hollistic diffing algorithm that makes use of 3 assumptions
-// to kjeep track of changes and only update what is necessary
-
-
-
-
-
-// OOP is a design paradiagm
-// inheritence // protoype (prototypal inheritence)
-// encapsulation //
-// abstraction // modularization pattern [react -. singular component should belong to a singular file] import and exporting(es6 version of require module.exports)
-// polymorphism // in JS to exhibit PM you must give up encapsulation 
-
-
-// the state hook
-
-// what does calling useState do?
-// returns a pair (create starte  item and function)
-// initializes state?
-// gets the current state of something
-//
-
-// it declares us a "state variable" -> preserve values between function calls (initializes state) this.state (class)
-
-// array destrucring syntax (es6)
-// const [count, setCount] = useState(0)
-
-// what do we pass to useState as ana rgument 
-// initial state value
-
-// what does useState return
-
-// effect hook
-
-
-// What does useEffect do?
-// tells react that ur component needs to do something after render 
-
-
-// Why is useEffect called inside a component? 
-// react to changes in state access to variable
-
-// certain scoped things (this, props, state )
-
-
-// Does useEffect run after every render?
-// useEffect(() => {
-//      document.title = `You clicked ${count} times`;
-// });
-
-
-
-// 3 reasons a component re-renders (updating)
-// props change
-// state change
-// a parent or ANY parent in the component tree hierarchy also rerenders for any reason
-
 
 
