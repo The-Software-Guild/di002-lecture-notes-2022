@@ -25,17 +25,51 @@ function printTruthValue(parameter) {
 // node event loop 6 different phases (only 3 are commonly interacted 
 // with and important === timer, poll, check)
 
+// JS has 1st class fucntions
+// Store fx's as values
+// Fx's can be returned from other fx's
+
+// 3. Pass around fx's as arguments
+
+// higher order function === a function that takes in another function (CB) as an argument
+function calculator(a, b, cb) {
+     // in invocation example 1
+     // value of a parameter === 3
+     // value of b parameter === 4
+     // console.log(`a param: ${a}, param b: ${b}, param fx: ${cb}`);
+
+     return cb(a, b);
+}
+
+// callbacks === fx passed as an argument to another function
+function add(num1, num2) {
+     return num1 + num2;
+}
+
+function multiply(mult1, mult2) {
+     return mult1 * mult2;
+}
+
+// invocation example 1
+const result1 = calculator(3, 4, add) // 7
+const result2 = calculator(7, 2, multiply) // 14
+
+// console.log(`result1: ${result1}, result2: ${result2}`)
 
 
+// const arrowFunction = () => {
+//      function nameExample() {
+//           console.log('this is a normal function')
+//      };
 
+//      return nameExample;
+// };
 
+// const storeResultOfFxReturn = arrowFunction();
 
+// console.log(storeResultOfFxReturn()); // this is a normal function
 
-
-
-
-
-
+// react => pure functions
 
 
 
@@ -53,12 +87,14 @@ function printTruthValue(parameter) {
 
 // zero indexed
 //                    0    1     2     3     4
-// const exampleArray = [1, true, myDog, {}, 'banana']
+const exampleArray = [1, true, [], {}, 'banana'];
 
-// console.log(exampleArray[0]) // 1
-// console.log(exampleArray[4]) // 
+// nameOfArray[index#]
+console.log(exampleArray[0]) // 1
+console.log(exampleArray[4]) // 
 
-
+console.log(exampleArray.pop()) // banana
+console.log(exampleArray) // [1, true, [], {}]
 // maps
 // lower time complexity relationship
 

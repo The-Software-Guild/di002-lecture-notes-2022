@@ -2,10 +2,14 @@
 
 // top of the DOM tree window object
 
+// console.log('hello world')
+
 // console.log(window)
-// console.log(document)
+// console.dir(document)
 // console.log(window.document.body)
 
+// HTMLcollections -> array like objects
+// Nodelists -> array like objects
 
 // parent/child relationships
 // node
@@ -16,7 +20,7 @@
 // who are siblings
 // leaf/internal
 
-//im just chaging this ebcause whatever
+
 
 // DOM interactions are computational
 // expensive
@@ -25,40 +29,50 @@
 // unidirectional language
 
 
-
-// callback functions are async that are passed into other functions
-const callbackFx = (cbParam1) => {
-    console.log(cbParam1)
-}
-
-function higherOrderFx(cb, paramX) {
-     cb(paramX)
-}
-
-higherOrderFx(callbackFx, 'this is being logged from line 304')
-
-// events
-
-// the cb fxc from line 44 syntax is reffered to as a event handler
-//html element.addEventLister('onClick', cb)
+// html element.addEventLister('onClick', cb)
 // eventTarget.addEventListener('eventName', callbackFx)
 
 // // event handler (onClick) vanilla js
-const onClick = (e) => {
-     e.stopPropagation()
-     console.log('this is being printed from our deeply nested child')
-}
+// const onClick = (e) => {
+//      e.stopPropagation()
+//      console.log('this is being printed from our deeply nested child')
+// }
 
-const targetParent = document.getElementById('parent')
-const targetDiv = document.getElementById('deeplyNestedChild')
-targetDiv.addEventListener('click', onClick)
-targetParent.addEventListener('click', (e) => {
-     console.log('this is from our parent')
+// const targetParent = document.getElementById('parent')
+// const targetDiv = document.getElementById('deeplyNestedChild')
+// targetDiv.addEventListener('click', onClick)
+// targetParent.addEventListener('click', (e) => {
+//      console.log('this is from our parent')
+// })
+
+
+
+
+
+
+// general syntax for an event listener
+// target.addEventListener('eventName', callbackFx)
+
+
+// if a Cb fx is a fx that gets passed to another fx as ana rgument
+// higher order fucntion
+
+
+window.addEventListener('click', function (e) {
+     console.log(e)
 })
 
-// window.addEventListener('scroll', (e) => {
-//      console.log(e)
-// })
+
+
+
+
+
+
+
+
+
+
+
 
 
 
