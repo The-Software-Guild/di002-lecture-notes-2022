@@ -58,9 +58,21 @@
 // higher order fucntion
 
 
-window.addEventListener('click', function (e) {
-     console.log(e)
-})
+// window.addEventListener('click', function (e) {
+//      console.log(e)
+// })
+
+
+
+// select an element from the html page 
+const pElement =  document.getElementById('textExample')
+pElement.appendChild(document.createTextNode('hello world'))
+console.log(pElement)
+
+
+
+
+
 
 
 

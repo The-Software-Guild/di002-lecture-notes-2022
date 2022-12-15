@@ -97,6 +97,17 @@
 // the name of component is PascalCase (actually constructor functions => class (js es6 classes))
 
 
+// component props are created by the devleoper
+// at the location a componet is renderded
+
+// card.jsx 
+// prop values are consumed where the componet
+// is composed and exported
+
+// all components should be composed first as function componensts
+// and then if you decide that you need state or any klifecycle emthods then you should
+// expand/refactor taht component to a functional component (hooks) class component
+
 
 // pure functions
 // 1. do not change or augment their inputs (props {})
@@ -307,5 +318,53 @@ const student1 = new Students('tony', false);
 // REST design paradaim
 // N + 1
 // Facebook create GraphQL -> federated ata layer implementation
+
+
+
+
+// 4 pillars of Object Oriented Progreamming (OOP)
+// encapsulation
+// to fully privatize (make internal) all of the workings
+// of somethign and only expose the bare mininimum for a user to interact with that thign
+
+
+// abstraction
+
+// there is NO inheritence in react 
+// inheritence - prototypal inheritence based on a prototype chain
+// protoypes are a system design pattern (GOFF Big 4)
+
+// polymorphism
+
+
+
+// pure if they do not attempt to change their inputs
+
+
+// state
+// state of the union 
+// state of a molecule (H20) -> solid (ice), liquid (water), gas (steam) )
+
+
+// current snapshot fo somethign that changes often
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

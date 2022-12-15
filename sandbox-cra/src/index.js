@@ -1,11 +1,10 @@
 import React from 'react'; 
-import ReactDOM from 'react-dom/client'; //external node module (dependency)
+import ReactDOM from 'react-dom/client'; 
 
-// importing code from a default export is done
-import App from './App'; // internal node module
 
-// reserve code for globally available data 
-// theme, user, auth, etc
+import App from './App'; 
+
+// themes, authenticaiton, routing providers, internationalization/locatuionaltion
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

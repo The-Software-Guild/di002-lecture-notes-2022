@@ -1,8 +1,6 @@
 import Card from './components/Card';
 
-
-// component props are created by the devleoper
-// at the location a componet is renderded
+// 
 
 function App() {
   return (
@@ -25,3 +23,6 @@ function App() {
 }
 
 export default App;
+
+
+// PascalCase
