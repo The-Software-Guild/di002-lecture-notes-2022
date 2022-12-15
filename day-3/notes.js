@@ -128,7 +128,7 @@
 
 // GET, POST, PUT, DELETE, GET ONE (paramterized)
 // display all the data GET (learn how to parse json)
-JSON.parse()
+// JSON.parse()
 // displaya  singular thing witha  GET ONE
 // add new things with POST
 // update things with DELETE
@@ -140,7 +140,7 @@ JSON.parse()
 // use state and effect hooks to store changes and perform sideffects
 // how to bundle formdata into a json object for POST & PUT
 // error handling for both requests and for forms
-JSON.stringify()
+// JSON.stringify()
 
 // OOP is a design paradiagm
 // inheritence // protoype (prototypal inheritence)
