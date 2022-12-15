@@ -1,28 +1,31 @@
-import Card from './components/Card';
+// App.jsx
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route
+} from "react-router-dom";
 
-// 
+import Landing from './components/pages/landing';
+import Counter from './components/pages/landing/Counter';
+import Pokemon from './components/pages/landing/Pokemon';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/landing' element={<Landing />}>
+      {/* compose two child routes represetning counter and pokemon */}
+      <Route path='counter' element={<Counter />} />
+      <Route path='pokemon' element={<Pokemon />} />
+    </Route>
+  )
+);
 
 function App() {
   return (
-    <div>
-      <Card
-        textColor='white'
-        bckgColor='lightblue'
-        text='first card' />
-      <Card
-        bckgColor='lightcoral'
-        text='second card' />
-      <Card
-        bckgColor='lightgreen'
-        text='third card' />
-      <Card
-        bckgColor='lightgrey'
-        text='fourth card' />
-    </div>
+    <>
+      <RouterProvider router={router}/>
+    </>
   );
 }
 
 export default App;
-
-
-// PascalCase
